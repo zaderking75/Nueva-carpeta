@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+    text-align: center;
+    width: 2000px;
+    }
+
+
+    #graficoContainer {
+        width: 800px;
+        height: 400px;
+
+    }
+
+    #graficoHistorial{
+    background-color: transparent;
+}
+
+    #centro{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    hr{
+        color: blue;
+        width: 500px;
+    }
+
+    .espacio{
+
+        padding: 15px;
+    }
+
+    button{
+        color:white;
+        background-color: aquamarine;
+        border: none;
+        border-radius: 10px;
+        width: 150px;
+        cursor: pointer;
+    }
+
+    .fondo{
+        background-color: aliceblue;
+        width: 1000px;
+        margin: 10px;
+        border: black 1px solid;
+    }
+
+    .centro{
+        display: flex;
+        justify-content: center;
+    }
+
+    
+
+</style>
+
+<body>
+    <div class="centro">
+    <div class="fondo">
+        <hr>
+        <h1>Conversor de Moneda</h1>
+        <hr>
+    <div>
+        <div class="espacio">
+            <label for="cantidad">Cantidad de Pesos Chilenos:</label>
+        </div>
+        <div>
+            <input type="number" id="cantidad" name="cantidad" required>
+        </div>
+        <div class="espacio">
+            <label for="moneda">Moneda a Convertir:</label>
+        </div>
+        <div>
+            <select id="moneda" name="moneda" required>
+                <option value="dolar">Dólar Estadounidense</option>
+                <option value="euro">euro</option>
+                <option value="dolar_intercambio">dolar_intercambio</option>
+            </select>
+        </div>
+        <div class="espacio">
+            <button id="convertirBtn">Convertir</button>
+        </div>
+    </div>
+
+        <p id="resultado"></p>
+
+
+    <div id="centro">
+        <div id="graficoContainer">
+            <canvas id="graficoHistorial"></canvas>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/grafico.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</html>
